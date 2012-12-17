@@ -40,7 +40,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(title: params[:post][:title], user_id: current_user.id, date: Time.now)
+    @post = Post.new(title: params[:post][:title], user_id: current_user.id, content: params[:post][:content])
 
     respond_to do |format|
       if @post.save

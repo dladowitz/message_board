@@ -1,20 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
-  <%= @post.title %>
+
+<h1>  <%= @post.title %> </h1>
+</p>
+<p>
+  posted by:
+  <b> <%= User.find(@post.user_id).email %> </b>
 </p>
 
 <p>
-  <b>Date:</b>
-  <%= @post.date %>
+  on
+  <%= @post.created_at.strftime("%B %d, %Y %I:%M%p") %>
 </p>
 
-<p>
-  <b>User:</b>
-  <%= @post.user_id %>
-</p>
+<div class="span5">
+  <%= @post.content %>
+</div>
 
+<br />
 
+<footer>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+</footer>
