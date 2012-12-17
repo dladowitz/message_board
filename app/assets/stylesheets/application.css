@@ -9,5 +9,18 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require twitter/bootstrap
  *= require_tree .
  */
+
+.alert {
+  text-align: center;
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.notice {
+  text-align: center;
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
